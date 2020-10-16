@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fade } from '@material-ui/core';
 
-const loadingImg = require('../../assets/loading.gif');
+const loadingImg = require('../../assets/images/loading.gif');
 
 const Loading = (props) => {
   return(

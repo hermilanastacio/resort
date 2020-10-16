@@ -8,14 +8,13 @@ import Rooms from './components/Rooms/Rooms';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Loading from './components/Loading/Loading';
+import TopNav from './components/TopNav/TopNav';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(function(){ 
-      setIsLoading(false); 
-    }, 1500);
+    setIsLoading(false); 
   },[]);
 
   return (
@@ -23,6 +22,7 @@ function App() {
       {isLoading
         ? <Loading isLoading={isLoading}/>
         : <React.Fragment>
+            <TopNav/>
             <Video/>
             <div style={{position:"absolute"}}>
               <Dashboard/>

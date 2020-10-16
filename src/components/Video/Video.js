@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Video.module.scss';
 
-const backgroundVideo = require('../../assets/background.mp4');
+const backgroundVideo = require('../../assets/videos/background.mp4');
 
 const Video = () => {
   return(
