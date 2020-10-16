@@ -1,0 +1,31 @@
+@mixin topNav {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+}
+
+@mixin smoothTransition {
+  transition: 0.5s;
+}
+
+.scale {
+  @include topNav;
+  background-color: #fff;
+  padding: 10px 10% 10px 10%;
+
+  .logoImg {
+    width:110px;
+    @include smoothTransition;
+  }
+}
+
+.shrink {
+  @include topNav;
+  background-color: transparent;
+  padding: 30px 10% 10px 10%;
+
+  .logoImg {
+    width:150px;
+    @include smoothTransition;
+  }
+}

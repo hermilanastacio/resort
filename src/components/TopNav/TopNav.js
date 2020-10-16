@@ -1,13 +1,16 @@
-import React, { useLayoutEffect, useState, useMemo } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
+import styles from './TopNav.module.scss';
+
+const logoImg = require('../../assets/images/logo.png');
 
 const TopNav = () => {
   const [scaleTopNav, setScaleTopNav] = useState(false);
 
   function scrollFunction() {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-      setScaleTopNav(false);
-    } else {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       setScaleTopNav(true);
+    } else {
+      setScaleTopNav(false);
     }
   }
 
@@ -16,9 +19,8 @@ const TopNav = () => {
   },[]);
   
   return (
-    <header style={{backgroundColor: scaleTopNav ?  "blue" : "#fff", position:"fixed", width:"100%", zIndex:2000}}>
-      Test
-
+    <header className={scaleTopNav ? styles.scale : styles.shrink}>
+      <img src={logoImg} alt="logo" className={styles.logoImg}/>
     </header>
   );
 }
