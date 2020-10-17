@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
 import Scrollspy from 'react-scrollspy'
 import styles from './TopNav.module.scss';
+import { Link } from 'react-scroll'
 
 const logoImg = require('../../assets/images/logo.png');
 
@@ -50,11 +51,11 @@ const TopNav = () => {
 
         <div className={styles.scrollSpyWrapper}>
           <Scrollspy items={pages} currentClassName={styles.active}>
-            <li><a href="#dashboard">DASHBOARD</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#rooms">ROOMS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><Link to="dashboard" smooth={true} duration={1000}>DASHBOARD</Link></li>
+            <li><Link to="about" smooth={true} duration={1000}>ABOUT</Link></li>
+            <li><Link to="gallery" smooth={true} duration={1000}>GALLERY</Link></li>
+            <li><Link to="rooms" smooth={true} duration={1000}>ROOMS</Link></li>
+            <li><Link to="contact" smooth={true} duration={1000}>CONTACT</Link></li>
           </Scrollspy>
         </div>
 
