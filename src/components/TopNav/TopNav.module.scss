@@ -3,6 +3,14 @@
   display: flex;
   justify-content: flex-end;
 
+  .active {
+    a {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+
   > ul {
     display: flex;
 
@@ -11,6 +19,9 @@
       padding: 0px 20px;
   
       > a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #bbb;
         text-decoration: none;
       }
     } 

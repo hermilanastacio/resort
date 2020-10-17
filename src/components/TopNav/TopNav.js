@@ -7,7 +7,7 @@ const logoImg = require('../../assets/images/logo.png');
 
 const useStyles = makeStyles(() => ({
   scale: {
-    padding: "10px 10% 15px 10%",
+    padding: "10px 10% 10px 10%",
     transition: "0.5s"
   },
   shrink: {
@@ -15,9 +15,6 @@ const useStyles = makeStyles(() => ({
     transition: "0.5s",
     backgroundColor:"transparent",
     boxShadow: "none"
-  },
-  active: {
-    backgroundColor:"red"
   }
 }));
 
@@ -42,21 +39,21 @@ const TopNav = () => {
     'dashboard',
     'about',
     'gallery',
-    'room',
+    'rooms',
     'contact'
   ];
 
   return( 
     <AppBar position="fixed" className={scaleTopNav ? classes.scale : classes.shrink}>
       <Toolbar className={classes.toolbarWrapper}>
-        <img src={logoImg} alt="logo" style={{width: scaleTopNav ? 120 : 170, transition:"0.5s"}}/>
+        <img src={logoImg} alt="logo" style={{width: scaleTopNav ? 100 : 170, transition:"0.5s"}}/>
 
         <div className={styles.scrollSpyWrapper}>
-          <Scrollspy items={pages} currentClassName={classes.active}>
+          <Scrollspy items={pages} currentClassName={styles.active}>
             <li><a href="#dashboard">DASHBOARD</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#room">ROOM</a></li>
+            <li><a href="#rooms">ROOMS</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </Scrollspy>
         </div>
