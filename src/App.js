@@ -8,8 +8,7 @@ import Rooms from './components/Rooms/Rooms';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Loading from './components/Loading/Loading';
-// import TopNav from './components/TopNav/TopNav';
-import TopNav from './components/AppBar/AppBar';
+import TopNav from './components/TopNav/TopNav';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
