@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/resort/static/css/main.e4b7422c.chunk.css",
-    "main.js": "/resort/static/js/main.46027cfa.chunk.js",
-    "main.js.map": "/resort/static/js/main.46027cfa.chunk.js.map",
+    "main.css": "/resort/static/css/main.28987286.chunk.css",
+    "main.js": "/resort/static/js/main.2eac3359.chunk.js",
+    "main.js.map": "/resort/static/js/main.2eac3359.chunk.js.map",
     "runtime-main.js": "/resort/static/js/runtime-main.612359e4.js",
     "runtime-main.js.map": "/resort/static/js/runtime-main.612359e4.js.map",
-    "static/js/2.ead51a00.chunk.js": "/resort/static/js/2.ead51a00.chunk.js",
-    "static/js/2.ead51a00.chunk.js.map": "/resort/static/js/2.ead51a00.chunk.js.map",
+    "static/js/2.c52095f0.chunk.js": "/resort/static/js/2.c52095f0.chunk.js",
+    "static/js/2.c52095f0.chunk.js.map": "/resort/static/js/2.c52095f0.chunk.js.map",
     "index.html": "/resort/index.html",
-    "precache-manifest.97d2d6f7445856986f05f0cf5e8aab23.js": "/resort/precache-manifest.97d2d6f7445856986f05f0cf5e8aab23.js",
+    "precache-manifest.63364be697698463837d11973610eb9d.js": "/resort/precache-manifest.63364be697698463837d11973610eb9d.js",
     "service-worker.js": "/resort/service-worker.js",
-    "static/css/main.e4b7422c.chunk.css.map": "/resort/static/css/main.e4b7422c.chunk.css.map",
-    "static/js/2.ead51a00.chunk.js.LICENSE.txt": "/resort/static/js/2.ead51a00.chunk.js.LICENSE.txt",
+    "static/css/main.28987286.chunk.css.map": "/resort/static/css/main.28987286.chunk.css.map",
+    "static/js/2.c52095f0.chunk.js.LICENSE.txt": "/resort/static/js/2.c52095f0.chunk.js.LICENSE.txt",
     "static/media/background.mp4": "/resort/static/media/background.f48b9ed4.mp4",
     "static/media/loading.gif": "/resort/static/media/loading.209c657f.gif",
     "static/media/logo.png": "/resort/static/media/logo.a563f887.png"
   },
   "entrypoints": [
     "static/js/runtime-main.612359e4.js",
-    "static/js/2.ead51a00.chunk.js",
-    "static/css/main.e4b7422c.chunk.css",
-    "static/js/main.46027cfa.chunk.js"
+    "static/js/2.c52095f0.chunk.js",
+    "static/css/main.28987286.chunk.css",
+    "static/js/main.2eac3359.chunk.js"
   ]
 }
