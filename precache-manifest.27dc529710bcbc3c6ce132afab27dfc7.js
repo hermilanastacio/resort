@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a959df4ba9fc6f28783923163a8b65fb",
+    "revision": "f9bc25b77043299b53fabb451c7979ce",
     "url": "/resort/index.html"
   },
   {
-    "revision": "8da43676e4cf4d21394f",
-    "url": "/resort/static/css/main.28987286.chunk.css"
+    "revision": "edeacd48fce76a54c1b9",
+    "url": "/resort/static/css/main.2a6c49c3.chunk.css"
   },
   {
-    "revision": "ba037a63c81f71d17fff",
-    "url": "/resort/static/js/2.c52095f0.chunk.js"
+    "revision": "c4411b0cb431a85589af",
+    "url": "/resort/static/js/2.1ea16333.chunk.js"
   },
   {
     "revision": "1a3cc71403f332d098a2b9cdd7c4c36d",
-    "url": "/resort/static/js/2.c52095f0.chunk.js.LICENSE.txt"
+    "url": "/resort/static/js/2.1ea16333.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8da43676e4cf4d21394f",
-    "url": "/resort/static/js/main.2eac3359.chunk.js"
+    "revision": "edeacd48fce76a54c1b9",
+    "url": "/resort/static/js/main.dd1f0d06.chunk.js"
   },
   {
     "revision": "186f18fd212240bbfce6",
