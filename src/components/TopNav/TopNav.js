@@ -1,31 +1,19 @@
 import React, { useLayoutEffect, useState } from 'react';
-import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { AppBar, Toolbar } from '@material-ui/core';
 import Scrollspy from 'react-scrollspy'
 import styles from './TopNav.module.scss';
 import { Link } from 'react-scroll'
+import { Menu as MenuIcon } from '@material-ui/icons';
 
 const logoImg = require('../../assets/images/logo.png');
 
-const useStyles = makeStyles(() => ({
-  scale: {
-    padding: "10px 10% 10px 10%",
-    transition: "0.5s"
-  },
-  shrink: {
-    padding: "35px 10% 15px 10%",
-    transition: "0.5s",
-    backgroundColor:"transparent",
-    boxShadow: "none"
-  }
-}));
-
-const TopNav = () => {
-  const classes = useStyles();
-
+const TopNav = (props) => {
   const [scaleTopNav, setScaleTopNav] = useState(false);
+  const matches = useMediaQuery('(min-width:992px)');
 
   function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       setScaleTopNav(true);
     } else {
       setScaleTopNav(false);
@@ -45,22 +33,30 @@ const TopNav = () => {
   ];
 
   return( 
-    <AppBar position="fixed" className={scaleTopNav ? classes.scale : classes.shrink}>
-      <Toolbar className={classes.toolbarWrapper}>
-        <img src={logoImg} alt="logo" style={{width: scaleTopNav ? 100 : 170, transition:"0.5s"}}/>
+    <div className={styles.root}>
+      <AppBar position="fixed" className={scaleTopNav ? styles.scale : styles.shrink}>
+        <Toolbar style={{minHeight: 0}}>
+          <img src={logoImg} alt="logo" className={styles.logoImg}/>
 
-        <div className={styles.scrollSpyWrapper}>
-          <Scrollspy items={pages} currentClassName={styles.active}>
-            <li><Link to="dashboard" smooth={true} duration={1000}>DASHBOARD</Link></li>
-            <li><Link to="about" smooth={true} duration={1000}>ABOUT</Link></li>
-            <li><Link to="gallery" smooth={true} duration={1000}>GALLERY</Link></li>
-            <li><Link to="rooms" smooth={true} duration={1000}>ROOMS</Link></li>
-            <li><Link to="contact" smooth={true} duration={1000}>CONTACT</Link></li>
-          </Scrollspy>
-        </div>
+          <div className={styles.scrollSpyWrapper}>
+            {matches
+              ? <Scrollspy items={pages} currentClassName={styles.active}>
+                  <li><Link to="dashboard" smooth={true} duration={1000}>DASHBOARD</Link></li>
+                  <li><Link to="about" smooth={true} duration={1000}>ABOUT</Link></li>
+                  <li><Link to="gallery" smooth={true} duration={1000}>GALLERY</Link></li>
+                  <li><Link to="rooms" smooth={true} duration={1000}>ROOMS</Link></li>
+                  <li><Link to="contact" smooth={true} duration={1000}>CONTACT</Link></li>
+                </Scrollspy>
+              : <MenuIcon 
+                  className={styles.hamburgerButton} 
+                  onClick={() => props.onShow(true)}
+                />
+            }
+          </div>
 
-      </Toolbar>
-    </AppBar>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 } 
  

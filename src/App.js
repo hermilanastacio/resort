@@ -9,9 +9,11 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Loading from './components/Loading/Loading';
 import TopNav from './components/TopNav/TopNav';
+import Slider from './components/Slider/Slider';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [showSlider, setShowSlider] = useState(false);
 
   useEffect(() => {
     setIsLoading(false); 
@@ -22,7 +24,7 @@ function App() {
       {isLoading
         ? <Loading isLoading={isLoading}/>
         : <React.Fragment>
-            <TopNav/>
+            <TopNav onShow={setShowSlider}/>
             <Video/>
             <div style={{position:"absolute"}}>
               <Dashboard/>
@@ -32,6 +34,10 @@ function App() {
               <Contact/>
               <Footer/>
             </div>
+            <Slider 
+              onShow={setShowSlider}
+              open={showSlider} 
+            />
           </React.Fragment>
       }
     </div>

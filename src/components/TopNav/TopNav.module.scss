@@ -1,29 +1,118 @@
-.scrollSpyWrapper {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
 
-  .active {
-    a {
-      color: #fff;
-      font-size: 17px;
-      font-weight: 700;
+.root {
+  .scrollSpyWrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  
+    .active {
+      a {
+        color: #fff;
+        font-size: 17px;
+        font-weight: 700;
+      }
+    }
+  
+    > ul {
+      display: flex;
+  
+      > li {
+        list-style-type: none;
+        padding: 0px 20px;
+    
+        > a {
+          font-size: 16px;
+          font-weight: 500;
+          color: #bbb;
+          text-decoration: none;
+        }
+      } 
     }
   }
 
-  > ul {
-    display: flex;
+  .scale {
+    padding: 10px 10% 10px 10%;
+    transition: 0.5s;
 
-    > li {
-      list-style-type: none;
-      padding: 0px 20px;
+    .logoImg {
+      width: 6.25rem;
+      transition: 0.5s;
+    }
+    .hamburgerButton {
+      color: #a5a5a5;
+      transition: 0.5s;
+      font-size: 2.65rem;
+    }
+  }
   
-      > a {
-        font-size: 16px;
-        font-weight: 500;
-        color: #bbb;
-        text-decoration: none;
-      }
-    } 
+  .shrink {
+    padding: 30px 10% 15px 10%;
+    transition: 0.5s;
+    background-color: transparent;
+    box-shadow: none;
+
+    .logoImg {
+      width: 10rem;
+      transition: 0.5s;
+    }
+    .hamburgerButton {
+      color: #a5a5a5;
+      transition: 0.5s;
+      font-size: 3.75rem;
+    }
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 479.98px) {
+    .scale {
+      padding: 10px 1% 10px 1% !important;
+    }
+    .shrink {
+      padding: 10px 1% 10px 1% !important;
+    }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 575.98px) {
+    .scale {
+      padding: 10px 1% 10px 1% !important;
+    }
+    .shrink {
+      padding: 15px 4% 10px 4% !important;
+    }
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    .scale {
+      padding: 10px 1% 10px 1% !important;
+    }
+    .shrink {
+      padding: 20px 3% 10px 3% !important;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .scale {
+      padding: 10px 3% 10px 3% !important;
+    }
+    .shrink {
+      padding: 20px 3% 10px 3% !important;
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .scale {
+      padding: 10px 5% 10px 5% !important;
+    }
+    .shrink {
+      padding: 20px 4% 10px 4% !important;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    .scale {
+      padding: 10px 4% 10px 4% !important;
+    }
+    .shrink {
+      padding: 20px 4% 10px 4% !important;
+    }
   }
 }
